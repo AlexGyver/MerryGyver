@@ -57,7 +57,8 @@ void loop() {
   offs++;
   if (++mcount > 80) {
     offs = mcount = 0;
-    mode++;// = rnd();
+    mode = (mode + 1) & 0x7;
+    // mode = rnd();
     disp.clear();
   }
   delay(180);
